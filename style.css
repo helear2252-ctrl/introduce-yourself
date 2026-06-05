@@ -489,16 +489,9 @@ button {
 
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
 }
-
-/* Layout 5 Cards Spanning Matrix */
-.portfolio-card[data-index="0"] { grid-column: span 3; }
-.portfolio-card[data-index="1"] { grid-column: span 3; }
-.portfolio-card[data-index="2"] { grid-column: span 2; }
-.portfolio-card[data-index="3"] { grid-column: span 2; }
-.portfolio-card[data-index="4"] { grid-column: span 2; }
 
 .portfolio-card {
     background: #FFFFFF;
@@ -1269,15 +1262,13 @@ button {
         padding: 80px 0;
     }
 
-    /* Portfolio: Grid changes from 6 to 4 columns */
+    /* Portfolio: Grid changes to 2 columns on tablet */
     .portfolio-grid {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
-    .portfolio-card[data-index="0"] { grid-column: span 2; }
-    .portfolio-card[data-index="1"] { grid-column: span 2; }
-    .portfolio-card[data-index="2"] { grid-column: span 2; }
-    .portfolio-card[data-index="3"] { grid-column: span 2; }
-    .portfolio-card[data-index="4"] { grid-column: span 4; } /* Spans entire row 3 */
+    .portfolio-card[data-index] {
+        grid-column: auto;
+    }
 
     /* About Section Grid: stacks vertically */
     .about-grid {
