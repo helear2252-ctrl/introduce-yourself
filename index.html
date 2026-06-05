@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JUN WEI | AI 科技個人品牌網站</title>
+    <meta name="description" content="全職交易員 JUN WEI 的個人品牌網站。整合 AI 交易策略、自動交易機器人與數據分析，呈現極簡與科技感融合的智慧投資決策系統。">
+    <!-- Google Fonts for premium tech typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Tech Grid Lines & Scanlines -->
+    <div class="tech-grid"></div>
+    <div class="scanlines"></div>
+
+    <!-- Navigation Bar -->
+    <header class="navbar" id="navbar">
+        <div class="navbar-container">
+            <a href="#home" class="nav-logo" id="nav-logo">JUN WEI</a>
+            
+            <!-- Mobile Menu Toggle Button -->
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link active" id="link-home">Home</a>
+                <a href="#portfolio" class="nav-link" id="link-portfolio">Portfolio</a>
+                <a href="#about" class="nav-link" id="link-about">About</a>
+                <a href="#trading-lab" class="nav-link" id="link-trading-lab">Trading Lab</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Home / Hero Section -->
+        <section id="home" class="hero-section">
+            <!-- Canvas for flowing particle network animations -->
+            <canvas id="particles-canvas" class="hero-canvas"></canvas>
+            
+            <!-- Fallback Hero Background Image container (loaded dynamically or via CSS) -->
+            <div class="hero-bg" id="hero-bg"></div>
+            
+            <!-- HUD Graphic Elements & Animations -->
+            <div class="hud-container">
+                <div class="hud-top-left font-tech">
+                    <span class="hud-tag font-bold">SYSTEM ACTIVE</span>
+                    <span class="hud-value blink-slow">SYS.LOC // 2c9673ab</span>
+                </div>
+                
+                <div class="hud-top-right font-tech">
+                    <span class="hud-tag">OPERATOR</span>
+                    <span class="hud-value">JUN WEI</span>
+                </div>
+
+                <!-- AI Information Stream / Live Data Flow HUD -->
+                <div class="hud-stream font-tech" id="hud-stream">
+                    <!-- Loaded dynamically via JS -->
+                </div>
+
+                <div class="hud-bottom-left font-tech">
+                    <div class="coordinate-display">
+                        X: <span id="mouse-x">0000</span> | Y: <span id="mouse-y">0000</span>
+                    </div>
+                </div>
+                
+                <div class="hud-bottom-right font-tech">
+                    <span class="hud-page-number">01 / 04</span>
+                </div>
+                
+                <!-- Down Arrow Scroll Indicator -->
+                <a href="#portfolio" class="scroll-indicator" aria-label="Scroll Down">
+                    <svg viewBox="0 0 24 24" class="scroll-arrow">
+                        <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                    </svg>
+                </a>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="portfolio-section section-padding reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle font-tech">VISUAL SHOWCASE</span>
+                    <h2 class="section-title">Portfolio</h2>
+                    <div class="title-bar"></div>
+                </div>
+                
+                <!-- Portfolio Card Grid (5 Cards on Desktop, 1 Column on Mobile) -->
+                <div class="portfolio-grid" id="portfolio-grid">
+                    <!-- Card 1 -->
+                    <div class="portfolio-card" data-index="0" data-src="images/02.jpg">
+                        <div class="card-image-wrapper">
+                            <img src="images/02.jpg" alt="Portfolio Image 02" class="portfolio-img" loading="lazy">
+                            <div class="card-overlay">
+                                <span class="card-view-btn font-tech">VIEW PROJECT</span>
+                            </div>
+                        </div>
+                        <div class="card-info">
+                            <span class="card-category font-tech">SYSTEM INTEGRATION</span>
+                            <h3 class="card-title">Trading System Interface</h3>
+                            <p class="card-desc">全自動化高頻交易執行面板與監控系統</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="portfolio-card" data-index="1" data-src="images/03.jpg">
+                        <div class="card-image-wrapper">
+                            <img src="images/03.jpg" alt="Portfolio Image 03" class="portfolio-img" loading="lazy">
+                            <div class="card-overlay">
+                                <span class="card-view-btn font-tech">VIEW PROJECT</span>
+                            </div>
+                        </div>
+                        <div class="card-info">
+                            <span class="card-category font-tech">ALGORITHMIC TRADING</span>
+                            <h3 class="card-title">AI Quantitative Strategies</h3>
+                            <p class="card-desc">多因子機器學習驅動之量化選股與避險模型</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="portfolio-card" data-index="2" data-src="images/04.jpg">
+                        <div class="card-image-wrapper">
+                            <img src="images/04.jpg" alt="Portfolio Image 04" class="portfolio-img" loading="lazy">
+                            <div class="card-overlay">
+                                <span class="card-view-btn font-tech">VIEW PROJECT</span>
+                            </div>
+                        </div>
+                        <div class="card-info">
+                            <span class="card-category font-tech">DATA ANALYSIS</span>
+                            <h3 class="card-title">Sentiment Analysis Engine</h3>
+                            <p class="card-desc">全球市場財經新聞與社群輿情即時語意分析 AI</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="portfolio-card" data-index="3" data-src="images/05.jpg">
+                        <div class="card-image-wrapper">
+                            <img src="images/05.jpg" alt="Portfolio Image 05" class="portfolio-img" loading="lazy">
+                            <div class="card-overlay">
+                                <span class="card-view-btn font-tech">VIEW PROJECT</span>
+                            </div>
+                        </div>
+                        <div class="card-info">
+                            <span class="card-category font-tech">NEURAL NETWORKS</span>
+                            <h3 class="card-title">Deep Learning Models</h3>
+                            <p class="card-desc">使用卷積神經網路 (CNN) 識別 K 線形態與走勢預測</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="portfolio-card" data-index="4" data-src="images/06.jpg">
+                        <div class="card-image-wrapper">
+                            <img src="images/06.jpg" alt="Portfolio Image 06" class="portfolio-img" loading="lazy">
+                            <div class="card-overlay">
+                                <span class="card-view-btn font-tech">VIEW PROJECT</span>
+                            </div>
+                        </div>
+                        <div class="card-info">
+                            <span class="card-category font-tech">INTELLIGENT BOT</span>
+                            <h3 class="card-title">Execution Algorithms</h3>
+                            <p class="card-desc">基於強化學習的訂單最佳執行演算法與流動性分析</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section section-padding reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle font-tech">THE PROFILE</span>
+                    <h2 class="section-title">About Me</h2>
+                    <div class="title-bar"></div>
+                </div>
+                
+                <div class="about-grid">
+                    <!-- Glassmorphism Bio Card -->
+                    <div class="about-card glass-panel">
+                        <div class="card-badge font-tech">PROFILE // BIO</div>
+                        <div class="about-bio-text">
+                            <p class="lead-text">我是一個全職交易員，擁有 4-5 年實務交易經驗。</p>
+                            <p>目前持續學習程式設計與數據分析，希望未來能夠整合多維度的先進技術，包含：</p>
+                        </div>
+                        
+                        <!-- Core Tech Objectives List -->
+                        <div class="objectives-list">
+                            <div class="objective-item">
+                                <div class="objective-num font-tech">01</div>
+                                <div class="objective-content">
+                                    <h4 class="objective-title">自動交易機器人 (Auto-Trading Bots)</h4>
+                                    <p class="objective-desc">開發高穩定性、低延遲的自動化下單與部位管理系統。</p>
+                                </div>
+                            </div>
+                            
+                            <div class="objective-item">
+                                <div class="objective-num font-tech">02</div>
+                                <div class="objective-content">
+                                    <h4 class="objective-title">AI 交易策略 (AI Trading Strategies)</h4>
+                                    <p class="objective-desc">運用機器學習與計量統計方法，回測並發掘高勝率 Alpha 策略。</p>
+                                </div>
+                            </div>
+                            
+                            <div class="objective-item">
+                                <div class="objective-num font-tech">03</div>
+                                <div class="objective-content">
+                                    <h4 class="objective-title">情緒分析 AI (Sentiment Analysis AI)</h4>
+                                    <p class="objective-desc">即時追蹤新聞媒體與社群論壇，對全球市場情緒進行特徵擷取。</p>
+                                </div>
+                            </div>
+                            
+                            <div class="objective-item">
+                                <div class="objective-num font-tech">04</div>
+                                <div class="objective-content">
+                                    <h4 class="objective-title">心理分析 AI (Psychological AI)</h4>
+                                    <p class="objective-desc">分析自身與市場大眾的交易行為特徵，建立決策偏差修正機制。</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="about-summary font-tech">
+                            <span>// VISION: 打造能夠協助投資決策的智慧系統。</span>
+                        </div>
+                    </div>
+
+                    <!-- Tech HUD Stat Display -->
+                    <div class="about-stats-panel glass-panel">
+                        <div class="card-badge font-tech">DIAGNOSTICS // CAPABILITY</div>
+                        <div class="stat-bars">
+                            <div class="stat-bar-group">
+                                <div class="stat-label font-tech">
+                                    <span>TRADING EXPERIENCE</span>
+                                    <span>4-5 YRS</span>
+                                </div>
+                                <div class="progress-track">
+                                    <div class="progress-bar" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="stat-bar-group">
+                                <div class="stat-label font-tech">
+                                    <span>DATA ANALYSIS</span>
+                                    <span>ADVANCED</span>
+                                </div>
+                                <div class="progress-track">
+                                    <div class="progress-bar" style="width: 70%"></div>
+                                </div>
+                            </div>
+                            <div class="stat-bar-group">
+                                <div class="stat-label font-tech">
+                                    <span>ALGORITHMIC DESIGN</span>
+                                    <span>DEVELOPING</span>
+                                </div>
+                                <div class="progress-track">
+                                    <div class="progress-bar" style="width: 60%"></div>
+                                </div>
+                            </div>
+                            <div class="stat-bar-group">
+                                <div class="stat-label font-tech">
+                                    <span>SENTIMENT / NLP</span>
+                                    <span>DEVELOPING</span>
+                                </div>
+                                <div class="progress-track">
+                                    <div class="progress-bar" style="width: 50%"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mini grid graphic -->
+                        <div class="hud-radar-visual">
+                            <div class="radar-circle circle-1"></div>
+                            <div class="radar-circle circle-2"></div>
+                            <div class="radar-line"></div>
+                            <div class="radar-signal-dots">
+                                <span class="radar-dot" style="top: 30%; left: 45%;"></span>
+                                <span class="radar-dot" style="top: 65%; left: 70%;"></span>
+                                <span class="radar-dot" style="top: 50%; left: 20%;"></span>
+                            </div>
+                            <span class="radar-label font-tech">AI DECISION RADAR ACTIVE</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trading Lab Section -->
+        <section id="trading-lab" class="trading-section section-padding reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle font-tech">INTERACTIVE SIMULATION</span>
+                    <h2 class="section-title">Trading Lab</h2>
+                    <div class="title-bar"></div>
+                </div>
+                
+                <div class="trading-grid">
+                    <!-- Simulation Controller -->
+                    <div class="trading-ctrl-panel glass-panel">
+                        <div class="card-badge font-tech">SIMULATOR CONTROLS</div>
+                        
+                        <div class="ctrl-buttons">
+                            <button id="btn-start" class="btn btn-primary font-tech">
+                                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                                Start Simulation
+                            </button>
+                            <button id="btn-stop" class="btn btn-secondary font-tech" disabled>
+                                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                                    <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+                                </svg>
+                                Stop Simulation
+                            </button>
+                        </div>
+
+                        <div class="system-status-indicator font-tech">
+                            <span class="indicator-dot" id="status-dot"></span>
+                            <span id="status-text">SYSTEM STANDBY</span>
+                        </div>
+
+                        <div class="trading-instructions">
+                            <h4 class="font-tech">// 模擬交易運作規則</h4>
+                            <ul>
+                                <li>按下 <strong>Start</strong> 開始模擬市場價格每秒之隨機波動。</li>
+                                <li>系統會即時計算 5 週期均線 (<strong>MA5</strong>) 與 20 週期均線 (<strong>MA20</strong>)。</li>
+                                <li>當 <strong>MA5 > MA20</strong> 時，觸發 <span class="signal-tag buy-tag font-tech">BUY</span> 訊號，代表短期趨勢轉強。</li>
+                                <li>當 <strong>MA5 < MA20</strong> 時，觸發 <span class="signal-tag sell-tag font-tech">SELL</span> 訊號，代表短期趨勢轉弱。</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Trading Terminal Metrics -->
+                    <div class="trading-terminal glass-panel">
+                        <div class="card-badge font-tech">REAL-TIME DATA TERMINAL</div>
+                        
+                        <div class="terminal-content">
+                            <!-- Metric 1: Current Price -->
+                            <div class="metric-row">
+                                <div class="metric-info">
+                                    <span class="metric-label font-tech">CURRENT PRICE</span>
+                                    <span class="metric-sublabel">即時市場波動價格</span>
+                                </div>
+                                <div class="metric-value font-tech" id="val-price">$100.00</div>
+                            </div>
+                            
+                            <div class="metric-divider"></div>
+
+                            <!-- MA Details Group -->
+                            <div class="ma-metrics-grid">
+                                <!-- Metric 2: MA5 -->
+                                <div class="metric-card">
+                                    <span class="metric-label font-tech">MA5</span>
+                                    <span class="metric-value font-tech value-small" id="val-ma5">--</span>
+                                </div>
+
+                                <!-- Metric 3: MA20 -->
+                                <div class="metric-card">
+                                    <span class="metric-label font-tech">MA20</span>
+                                    <span class="metric-value font-tech value-small" id="val-ma20">--</span>
+                                </div>
+                            </div>
+                            
+                            <div class="metric-divider"></div>
+
+                            <!-- Metric 4: Trading Signal -->
+                            <div class="metric-row signal-row">
+                                <div class="metric-info">
+                                    <span class="metric-label font-tech">TRADING SIGNAL</span>
+                                    <span class="metric-sublabel">均線交叉決策訊號</span>
+                                </div>
+                                <div class="metric-value font-tech signal-display" id="val-signal">WAIT</div>
+                            </div>
+                        </div>
+
+                        <!-- Real-time dynamic chart preview (Canvas) -->
+                        <div class="mini-chart-container">
+                            <canvas id="trading-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer font-tech">
+        <div class="container footer-container">
+            <p>&copy; 2026 JUN WEI. All Rights Reserved. Built with Vanilla Web Tech.</p>
+            <p class="footer-status">SYS_STATUS: OPTIMAL</p>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal for Portfolio Previews -->
+    <div id="lightbox" class="lightbox-modal" aria-hidden="true" role="dialog">
+        <button class="lightbox-close" id="lightbox-close" aria-label="Close Lightbox">
+            <svg viewBox="0 0 24 24" width="28" height="28">
+                <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z" fill="white"/>
+            </svg>
+        </button>
+        <div class="lightbox-content">
+            <div id="lightbox-img-container">
+                <!-- Image or custom dynamic placeholder SVG will be inserted here -->
+            </div>
+            <div class="lightbox-caption font-tech" id="lightbox-caption">Project Details</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
