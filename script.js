@@ -21,7 +21,11 @@ function initNavbar() {
     const mobileToggle = document.getElementById('mobile-toggle');
     const navMenu = document.getElementById('nav-menu');
     const navLinks = document.querySelectorAll('.nav-link');
-    const sections = document.querySelectorAll('section');
+    const currentPage = document.body.dataset.page;
+
+    navLinks.forEach(link => {
+        link.classList.toggle('active', link.dataset.page === currentPage);
+    });
 
     // Scroll effect (Header background change)
     window.addEventListener('scroll', () => {
@@ -30,30 +34,15 @@ function initNavbar() {
         } else {
             navbar.classList.remove('scrolled');
         }
-
-        // Active Link Spy
-        let currentSectionId = '';
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop - 100;
-            const sectionHeight = section.clientHeight;
-            if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
-                currentSectionId = section.getAttribute('id');
-            }
-        });
-
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === `#${currentSectionId}`) {
-                link.classList.add('active');
-            }
-        });
     });
 
     // Mobile Menu Toggle
-    mobileToggle.addEventListener('click', () => {
-        mobileToggle.classList.toggle('active');
-        navMenu.classList.toggle('active');
-    });
+    if (mobileToggle && navMenu) {
+        mobileToggle.addEventListener('click', () => {
+            mobileToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+    }
 
     // Close Mobile Menu on link click
     navLinks.forEach(link => {
@@ -389,6 +378,8 @@ function initPortfolioLightbox() {
     const lightboxCaption = document.getElementById('lightbox-caption');
     const portfolioCards = document.querySelectorAll('.portfolio-card');
 
+    if (!lightbox || !lightboxContainer || !lightboxClose || !lightboxCaption || !portfolioCards.length) return;
+
     portfolioCards.forEach(card => {
         card.addEventListener('click', () => {
             const index = card.getAttribute('data-index');
@@ -462,6 +453,8 @@ function initTradingLab() {
     const valMa20 = document.getElementById('val-ma20');
     const valSignal = document.getElementById('val-signal');
     const chartCanvas = document.getElementById('trading-chart');
+
+    if (!btnStart || !btnStop || !statusDot || !statusText || !valPrice || !valMa5 || !valMa20 || !valSignal || !chartCanvas) return;
 
     let isSimulating = false;
     let updateTimer = null;

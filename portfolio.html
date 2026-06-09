@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trading Portfolio | JUN WEI</title>
+    <meta name="description" content="JUN WEI AI Automation Portfolio，整合交易經驗、資料分析與人工智慧的自動化投資研究網站。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-fade" data-page="portfolio">
+    <div class="tech-grid"></div>
+    <div class="scanlines"></div>
+
+    <header class="navbar" id="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="nav-logo" id="nav-logo">JUN WEI</a>
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <nav class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link " data-page="home" id="link-home">Home</a>
+                <a href="portfolio.html" class="nav-link active" data-page="portfolio" id="link-portfolio">Portfolio</a>
+                <a href="about.html" class="nav-link " data-page="about" id="link-about">About</a>
+                <a href="trading.html" class="nav-link " data-page="trading" id="link-trading-lab">Trading Lab</a>
+            </nav>
+        </div>
+    </header>
+    <main class="site-main">
+<section id="portfolio" class="portfolio-section section-padding reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle font-tech">VISUAL SHOWCASE</span>
+                    <h2 class="section-title">Trading Portfolio</h2>
+                    <div class="title-bar"></div>
+                </div>
+
+                <div class="page-intro glass-panel">
+                    <p>這裡展示手工交易策略、EA 策略、月收支紀錄與自動化交易研究成果，作為 AI 投資系統的實戰資料基礎。</p>
+                </div>
+
+                <div class="feature-tag-grid portfolio-tags">
+                    <div class="feature-tag-card glass-panel">
+                        <span class="feature-tag-title font-tech">Manual Trading</span>
+                        <p>手工交易策略紀錄與績效分析</p>
+                    </div>
+                    <div class="feature-tag-card glass-panel">
+                        <span class="feature-tag-title font-tech">Algorithmic Trading</span>
+                        <p>EA 自動化交易策略與回測研究</p>
+                    </div>
+                    <div class="feature-tag-card glass-panel">
+                        <span class="feature-tag-title font-tech">Performance Review</span>
+                        <p>月收支、風控與策略優化紀錄</p>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Card Grid (5 Cards on Desktop, 1 Column on Mobile) -->
+                <div class="portfolio-grid" id="portfolio-grid">
+                    <!-- Card 1 -->
+                    <div class="portfolio-card" data-index="0" data-src="assets/02.jpg">
+                        <div class="card-image-wrapper">
+                            <img src="assets/02.jpg" alt="手工三單策略" class="portfolio-img" loading="lazy">
+                            <div class="card-overlay">
+                                <span class="card-view-btn font-tech">VIEW STRATEGY</span>
+                            </div>
+                        </div>
+                        <div class="card-info">
+                            <span class="card-category font-tech">MANUAL TRADING</span>
+                            <h3 class="card-title">手工三單策略</h3>
+                            <p class="card-desc">每日 11 點、15 點、17 點固定各開一張單，止損 6 個點，止盈看市場行情決定。跟單資金：3000美金0.3手 / 5000美金0.5手 / 10000美金1手。</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="portfolio-card" data-index="1" data-src="assets/03.jpg">
+                        <div class="card-image-wrapper">
+                            <img src="assets/03.jpg" alt="鼎豐 EA 策略" class="portfolio-img" loading="lazy">
+                            <div class="card-overlay">
+                                <span class="card-view-btn font-tech">VIEW STRATEGY</span>
+                            </div>
+                        </div>
+                        <div class="card-info">
+                            <span class="card-category font-tech">ALGORITHMIC TRADING</span>
+                            <h3 class="card-title">鼎豐 EA 策略</h3>
+                            <p class="card-desc">盤整用箱型守住獲利，走勢就順勢加碼。跟單資金：500美金開美分1倍手數/收益。</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="portfolio-card" data-index="2" data-src="assets/04.jpg">
+                        <div class="card-image-wrapper">
+                            <img src="assets/04.jpg" alt="預言家 EA 策略" class="portfolio-img" loading="lazy">
+                            <div class="card-overlay">
+                                <span class="card-view-btn font-tech">VIEW STRATEGY</span>
+                            </div>
+                        </div>
+                        <div class="card-info">
+                            <span class="card-category font-tech">QUANTITATIVE STRATEGIES</span>
+                            <h3 class="card-title">預言家 EA 策略</h3>
+                            <p class="card-desc">根據成交量、換手率、流動性自動計算進場時機，非根據圖表判斷。全球交易大賽冠軍策略。</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="portfolio-card" data-index="3" data-src="assets/05.jpg">
+                        <div class="card-image-wrapper">
+                            <img src="assets/05.jpg" alt="長波趨勢手工策略" class="portfolio-img" loading="lazy">
+                            <div class="card-overlay">
+                                <span class="card-view-btn font-tech">VIEW STRATEGY</span>
+                            </div>
+                        </div>
+                        <div class="card-info">
+                            <span class="card-category font-tech">TREND TRADING</span>
+                            <h3 class="card-title">長波趨勢手工策略</h3>
+                            <p class="card-desc">融合趨勢理論與反轉 K 線理論進行入場，輕倉操作，做好持倉風控。跟單資金：10000美金1倍手數/收益。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer font-tech">
+        <div class="container footer-container">
+            <p>&copy; 2026 JUN WEI. All Rights Reserved. Built with Vanilla Web Tech.</p>
+            <p class="footer-status">SYS_STATUS: OPTIMAL</p>
+        </div>
+    </footer>
+    <div id="lightbox" class="lightbox-modal" aria-hidden="true" role="dialog">
+        <button class="lightbox-close" id="lightbox-close" aria-label="Close Lightbox">
+            <svg viewBox="0 0 24 24" width="28" height="28">
+                <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z" fill="white"/>
+            </svg>
+        </button>
+        <div class="lightbox-content">
+            <div id="lightbox-img-container"></div>
+            <div class="lightbox-caption font-tech" id="lightbox-caption">Project Details</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

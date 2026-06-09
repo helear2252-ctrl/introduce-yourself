@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trading Lab | JUN WEI</title>
+    <meta name="description" content="JUN WEI AI Automation Portfolio，整合交易經驗、資料分析與人工智慧的自動化投資研究網站。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page-fade" data-page="trading">
+    <div class="tech-grid"></div>
+    <div class="scanlines"></div>
+
+    <header class="navbar" id="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="nav-logo" id="nav-logo">JUN WEI</a>
+            <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <nav class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link " data-page="home" id="link-home">Home</a>
+                <a href="portfolio.html" class="nav-link " data-page="portfolio" id="link-portfolio">Portfolio</a>
+                <a href="about.html" class="nav-link " data-page="about" id="link-about">About</a>
+                <a href="trading.html" class="nav-link active" data-page="trading" id="link-trading-lab">Trading Lab</a>
+            </nav>
+        </div>
+    </header>
+    <main class="site-main">
+<section id="trading-lab" class="trading-section section-padding reveal">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle font-tech">INTERACTIVE SIMULATION</span>
+                    <h2 class="section-title">AI Trading Simulation Lab</h2>
+                    <div class="title-bar"></div>
+                </div>
+
+                <div class="page-intro glass-panel">
+                    <p>此區塊用於展示模擬交易邏輯，透過價格變化、均線判斷與交易訊號，呈現自動化投資系統的核心概念。</p>
+                </div>
+
+                <div class="system-features glass-panel">
+                    <h3 class="font-tech">System Features</h3>
+                    <ul>
+                        <li>Real-time price simulation</li>
+                        <li>Moving average signal logic</li>
+                        <li>Buy / Sell decision display</li>
+                        <li>Future AI model integration</li>
+                    </ul>
+                </div>
+                
+                <div class="trading-grid">
+                    <!-- Simulation Controller -->
+                    <div class="trading-ctrl-panel glass-panel">
+                        <div class="card-badge font-tech">SIMULATOR CONTROLS</div>
+                        
+                        <div class="ctrl-buttons">
+                            <button id="btn-start" class="btn btn-primary font-tech">
+                                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                                    <path d="M8 5v14l11-7z"/>
+                                </svg>
+                                Start Simulation
+                            </button>
+                            <button id="btn-stop" class="btn btn-secondary font-tech" disabled>
+                                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor">
+                                    <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+                                </svg>
+                                Stop Simulation
+                            </button>
+                        </div>
+
+                        <div class="system-status-indicator font-tech">
+                            <span class="indicator-dot" id="status-dot"></span>
+                            <span id="status-text">SYSTEM STANDBY</span>
+                        </div>
+
+                        <div class="trading-instructions">
+                            <h4 class="font-tech">// 模擬交易運作規則</h4>
+                            <ul>
+                                <li>按下 <strong>Start</strong> 開始模擬市場價格每秒之隨機波動。</li>
+                                <li>系統會即時計算 5 週期均線 (<strong>MA5</strong>) 與 20 週期均線 (<strong>MA20</strong>)。</li>
+                                <li>當 <strong>MA5 > MA20</strong> 時，觸發 <span class="signal-tag buy-tag font-tech">BUY</span> 訊號，代表短期趨勢轉強。</li>
+                                <li>當 <strong>MA5 < MA20</strong> 時，觸發 <span class="signal-tag sell-tag font-tech">SELL</span> 訊號，代表短期趨勢轉弱。</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Trading Terminal Metrics -->
+                    <div class="trading-terminal glass-panel">
+                        <div class="card-badge font-tech">REAL-TIME DATA TERMINAL</div>
+                        
+                        <div class="terminal-content">
+                            <!-- Metric 1: Current Price -->
+                            <div class="metric-row">
+                                <div class="metric-info">
+                                    <span class="metric-label font-tech">CURRENT PRICE</span>
+                                    <span class="metric-sublabel">即時市場波動價格</span>
+                                </div>
+                                <div class="metric-value font-tech" id="val-price">$100.00</div>
+                            </div>
+                            
+                            <div class="metric-divider"></div>
+
+                            <!-- MA Details Group -->
+                            <div class="ma-metrics-grid">
+                                <!-- Metric 2: MA5 -->
+                                <div class="metric-card">
+                                    <span class="metric-label font-tech">MA5</span>
+                                    <span class="metric-value font-tech value-small" id="val-ma5">--</span>
+                                </div>
+
+                                <!-- Metric 3: MA20 -->
+                                <div class="metric-card">
+                                    <span class="metric-label font-tech">MA20</span>
+                                    <span class="metric-value font-tech value-small" id="val-ma20">--</span>
+                                </div>
+                            </div>
+                            
+                            <div class="metric-divider"></div>
+
+                            <!-- Metric 4: Trading Signal -->
+                            <div class="metric-row signal-row">
+                                <div class="metric-info">
+                                    <span class="metric-label font-tech">TRADING SIGNAL</span>
+                                    <span class="metric-sublabel">均線交叉決策訊號</span>
+                                </div>
+                                <div class="metric-value font-tech signal-display" id="val-signal">WAIT</div>
+                            </div>
+                        </div>
+
+                        <!-- Real-time dynamic chart preview (Canvas) -->
+                        <div class="mini-chart-container">
+                            <canvas id="trading-chart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer font-tech">
+        <div class="container footer-container">
+            <p>&copy; 2026 JUN WEI. All Rights Reserved. Built with Vanilla Web Tech.</p>
+            <p class="footer-status">SYS_STATUS: OPTIMAL</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
